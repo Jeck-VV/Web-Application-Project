@@ -1,0 +1,71 @@
+.goHomeButton {
+    width: 150px;
+    background: linear-gradient(135deg, #df6f06, #c75932, #d63333);
+    border-radius: 5rem;
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.goHomeButton:hover {
+    background: linear-gradient(135deg, #d63333, #c75932, #df6f06);
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    transform: translateY(-2px);
+    filter: brightness(1.15);
+}
+
+.goHomeButton:focus,
+.goHomeButton:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.gamemap {
+    background: linear-gradient(135deg, #d63333, #c75932, #df6f06);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.dev-info {
+    position: fixed;
+    top: 400px;
+    left: 10px;
+}
+
+/* ── Countdown overlay ── */
+.countdown-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: overlayFadeIn 0.3s ease;
+}
+
+.countdown-number {
+    font-size: 14rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #d63333, #c75932, #df6f06);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: countPop 0.9s ease forwards;
+    line-height: 1;
+    user-select: none;
+}
+
+@keyframes overlayFadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes countPop {
+    0%   { transform: scale(1.6); opacity: 0; }
+    30%  { transform: scale(1);   opacity: 1; }
+    75%  { transform: scale(1);   opacity: 1; }
+    100% { transform: scale(0.7); opacity: 0; }
+}

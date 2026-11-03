@@ -1,0 +1,16 @@
+.mainClass {
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+        url('/img/bg-immage.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mainClass[data-bs-theme="dark"] {
+    background-image:
+        linear-gradient(rgba(20, 20, 30, 0.88), rgba(20, 20, 30, 0.88)),
+        url('/img/bg-immage.png');
+    color: #e0e0e0;
+}
